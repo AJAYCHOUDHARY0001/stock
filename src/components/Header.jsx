@@ -32,12 +32,12 @@ function Header() {
   const [navShow, setNavShow] = useState(false);
   return (
     <header className="bg-black d-flex flex-column container-fluid py-4 ps-3">
-      <section className="row pb-3 pb-lg-0">
+      <section className="row pb-3 pb-lg-0 align-items-center mb-4">
         <div className="col-lg-2 col-3 col-sm-2">
           <img src={pagelogo} alt="page-logo" className="d-inline-block" />
         </div>
         <div className="col-lg-10 col-9 col-sm-10">
-          <div className="row flex-column-reverse flex-md-row">
+          <div className="row flex-column-reverse flex-md-row align-items-center">
             <div className="col-md-8">
               <form className="mx_w420 w-100 input_box d-flex align-items-center">
                 <img src={Search} alt="search_bar" />
@@ -49,8 +49,8 @@ function Header() {
               </form>
             </div>
 
-            <div className="col-md-4 col- 5">
-              <div className="d-flex align-items-center justify-content-end mb-lg-5 mb-3">
+            <div className="col-md-4">
+              <div className="d-flex align-items-center justify-content-end">
                 <div className="purple_dot position-relative">
                   <a href="#">
                     <img src={Notification} alt="Notification" />
@@ -101,7 +101,7 @@ function Header() {
         </div>
       </section>
       <section className="row flex-column flex-lg-row">
-        <section className="col-2">
+        <section className="col-2 mt-xl-4">
           <nav className="d-none d-xl-flex flex-column justify-content-between h-100">
             <div>
               <div>
@@ -215,11 +215,10 @@ function Header() {
             ></button>
           </div>
         </section>
-
         <section className="col-xl-10 col-12 ">
           <div className="row">
-            <div className="col-lg-8">
-              <div className="d-flex justify-content-between mt-5">
+            <div className="col-lg-8 mt-4">
+              <div className="d-flex justify-content-between">
                 <div className="d-flex ">
                   <p className="ff_inter fw_500 fs_3xl text-white mb-0">BTC</p>
                   <img src={bit_coin} alt="bitcoin" className="ms-2" />
@@ -491,7 +490,7 @@ function Header() {
               </div>
             </div>
 
-            <div className="col-lg-4 mt-5">
+            <div className="col-lg-4 mt-4">
               <h2 className="fw-semibold fs_2xl ff_inter text-white-50 text-lg-end text-center">
                 Total Ballance
               </h2>
