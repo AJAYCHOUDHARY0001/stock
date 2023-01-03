@@ -156,7 +156,7 @@
 }
 
 .Premium_btn {
-  padding: 14px 0px;
+  padding: 8px 0px;
   background: #e0aaff;
   border-radius: 12px;
   border: 2px solid #e0aaff;
@@ -182,7 +182,13 @@
 .input_box {
   background: #333333;
   border-radius: 12px;
-  padding: 0px 60px 0px 15px;
+  padding: 0px 10px 0px 15px;
+}
+body {
+  background-image: url(./images/png/Desktop.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .src_bar {
@@ -194,7 +200,7 @@
 }
 
 .mx_w420 {
-  max-width: 440px;
+  max-width: 420px !important;
 }
 
 .smll_line::before {
@@ -329,6 +335,7 @@
   border-radius: 8px;
   padding: 9px 16px 9px 12px;
   transition: all 400ms ease-in-out;
+  margin-bottom: 16px;
 }
 
 .smll_box:hover {
@@ -388,7 +395,7 @@
   );
   border: 0.1px solid #d9d9d9;
   border-radius: 8px;
-  padding: 10px 30px 22px 20px;
+  padding: 20px;
 }
 
 .mx_w200 {

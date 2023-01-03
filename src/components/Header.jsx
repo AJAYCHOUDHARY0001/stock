@@ -31,15 +31,15 @@ import menu from "../images/svg/menu.svg";
 function Header() {
   const [navShow, setNavShow] = useState(false);
   return (
-    <header className="bg-black d-flex flex-column container-fluid py-4 ps-3">
-      <section className="row pb-3 pb-lg-0 align-items-center mb-4">
+    <header className="bg_header d-flex flex-column container py-4 ps-3">
+      <section className="row align-items-center mb-4">
         <div className="col-lg-2 col-3 col-sm-2">
           <img src={pagelogo} alt="page-logo" className="d-inline-block" />
         </div>
         <div className="col-lg-10 col-9 col-sm-10">
           <div className="row flex-column-reverse flex-md-row align-items-center">
-            <div className="col-md-8">
-              <form className="mx_w420 w-100 input_box d-flex align-items-center">
+            <div className="col-md-7">
+              <form className="mx_w420 w-100 input_box d-none d-md-flex align-items-center">
                 <img src={Search} alt="search_bar" />
                 <input
                   type="text"
@@ -48,8 +48,7 @@ function Header() {
                 />
               </form>
             </div>
-
-            <div className="col-md-4">
+            <div className="col-md-5">
               <div className="d-flex align-items-center justify-content-end">
                 <div className="purple_dot position-relative">
                   <a href="#">
@@ -60,7 +59,7 @@ function Header() {
                   <Button>
                     <div className="d-flex align-items-center">
                       <img src={woman} alt="woman" />
-                      <h3 className="ff_inter fw_500 fs_md text-white ms-lg-3 mb-0">
+                      <h3 className="ff_inter fw_500 fs_md text-white ms-3 mb-0">
                         Mariana James
                       </h3>
                     </div>
@@ -95,11 +94,29 @@ function Header() {
                     </Dropdown.Item>
                   </Dropdown.Menu>
                 </Dropdown>
+                <button
+                  onClick={() => setNavShow(true)}
+                  className="d-flex d-xl-none p-2 rounded-2 border_none"
+                >
+                  <img src={menu} alt="menu" />
+                </button>
               </div>
             </div>
           </div>
         </div>
       </section>
+      <div className="d-flex d-md-none justify-content-center">
+        <div className="mx_w420 w-100">
+          <form className="input_box d-flex">
+            <img src={Search} alt="search_bar" />
+            <input
+              type="text"
+              placeholder="Find Something..."
+              className="src_bar w-100"
+            />
+          </form>
+        </div>
+      </div>
       <section className="row flex-column flex-lg-row">
         <section className="col-2 mt-xl-4">
           <nav className="d-none d-xl-flex flex-column justify-content-between h-100">
@@ -153,12 +170,6 @@ function Header() {
               </div>
             </div>
           </nav>
-          <button
-            onClick={() => setNavShow(true)}
-            className="d-flex d-xl-none p-2 rounded-2 border_none"
-          >
-            <img src={menu} alt="menu" />
-          </button>
           <div className={`${navShow ? "nav-fix bg-dark" : "fix-navbar"}`}>
             <nav className="d-flex d-xl-none flex-column">
               <div>
@@ -447,15 +458,17 @@ function Header() {
                   </div>
                 </div>
                 <div className="col-xl-5 col-md-6 mt-5 mt-md-0">
-                  <div className="d-flex flex-column justify-content-center purple_box">
-                    <p className="ff_inter fw-semibold fs_2xl lh_sm text-white mb-0 mx_w200">
-                      New Features That Will Make Your
-                      <span className="mehndi"> Crypto</span> Life Easier
-                    </p>
-                    <p className="ff_inter fw-normal fs_xsm lh_xsm off_white mb-0 mt-1">
-                      We’re finally ready to tell <br /> you everything about
-                      this new version
-                    </p>
+                  <div className="d-flex flex-column justify-content-between purple_box">
+                    <div>
+                      <p className="ff_inter fw-semibold fs_2xl lh_sm text-white mb-0">
+                        New Features <br /> That Will Make <br /> Your
+                        <span className="mehndi"> Crypto</span> Life Easier
+                      </p>
+                      <p className="ff_inter fw-normal fs_xsm lh_xsm off_white mb-0 mt-3">
+                        We’re finally ready to tell <br /> you everything about
+                        this new version
+                      </p>
+                    </div>
                     <div className="d-flex align-items-center mt-4 justify-content-end">
                       <p className="ff_inter fw_500 fs_sm lite_white mb-0 me-2">
                         Lets See
